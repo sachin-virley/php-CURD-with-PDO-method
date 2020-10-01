@@ -1,18 +1,6 @@
 <?php
 
-    $host = 'localhost';
-    $user = 'root';
-    $password = '';
-    $name = 'databse name';
-
-    $dsn = "mysql:host=".$host.";dbname=".$name;
-    try{
-        $conn = new PDO($dsn, $user, $password);
-    }
-    catch(PDOException $e){
-        exit("Error : ".$e->getMessage());
-    }
-
+include("Connection.php");
 
     $sql = "SELECT * FROM table_name";
     $querry = $conn->prepare($sql);
