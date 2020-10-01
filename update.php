@@ -1,19 +1,6 @@
 <?php
 
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$dbname = 'databse name';
-
-//set DSN (data source network)
-$dsn = 'mysql:host='. $host .';dbname='.$dbname;
-try{
-$db = new PDO($dsn,$user, $password,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-    echo "connected","<br>";
-}
-catch(PDOException $e){
-    exit("error :".$e->$getMessage());
-}
+    include("Connectin.php");
     
     $var1 = 'value1';
     $var2 = 'value2';
